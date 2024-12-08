@@ -50,7 +50,7 @@ const Introduction = () => {
     >
       {/* First Row - LOOK + Panoramic Image */}
       <div
-        className={`${bebasNeue.className} container pt-8 space-y-4 text-main`}
+        className={`${bebasNeue.className} container pt-8 space-y-4 text-black`}
       >
         <div className="grid grid-cols-12 gap-4 items-center ">
           <div className="col-span-7 self-end">
@@ -114,10 +114,10 @@ const Introduction = () => {
         </div>
 
         {/* Third Row - MATHIVERI */}
-        <div className="grid grid-cols-12 gap-4 items-center">
+        <div className="grid grid-cols-12 gap-4 items-center ">
           <div className="col-span-4 relative h-[20vh]"></div>
           <div className="col-span-8">
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start -mt-14">
               <h1
                 ref={(el) => headingRefs.current.push(el)}
                 className="text-[120px] md:text-[160px] font-extralight"

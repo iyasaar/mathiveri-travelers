@@ -6,7 +6,7 @@ const AboutSection = () => {
   const headingRef = useRef(null);
   const textRef = useRef(null);
   const buttonRef = useRef(null);
-  const imageRefs = useRef([]);
+  const imageRefs = useRef<any>([]);
 
   useEffect(() => {
     // Animations for text
@@ -27,7 +27,7 @@ const AboutSection = () => {
     );
 
     // Animations for images
-    imageRefs.current.forEach((image, index) => {
+    imageRefs.current.forEach((image: any, index: any) => {
       gsap.fromTo(
         image,
         { opacity: 0, y: 50 },
@@ -80,7 +80,7 @@ const AboutSection = () => {
       <div className="grid grid-cols-3 gap-8 mt-16 items-center">
         {/* Left - Smaller Grayscale Image */}
         <div
-          ref={(el) => imageRefs.current.push(el)}
+          ref={(el: any) => imageRefs.current.push(el)}
           className="col-span-1 relative h-[200px] lg:h-[300px] overflow-hidden"
         >
           <Image
@@ -94,7 +94,7 @@ const AboutSection = () => {
 
         {/* Right - Larger Color Image */}
         <div
-          ref={(el) => imageRefs.current.push(el)}
+          ref={(el: any) => imageRefs.current.push(el)}
           className="col-span-2 relative h-[400px] lg:h-[600px] overflow-hidden"
         >
           <Image
