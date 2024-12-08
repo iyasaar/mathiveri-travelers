@@ -1,19 +1,35 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Navbar from "@/components/nav/Navbar";
 import Hero from "@/components/home/Hero";
 import Introduction from "@/components/home/Introduction";
+import Lenis from "lenis";
+import { ReactLenis } from "lenis/react";
+import About from "@/components/home/About";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+  }, []);
+
   return (
     <>
       <Hero />
       <Introduction />
+      <About />
     </>
   );
 };
