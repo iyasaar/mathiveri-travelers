@@ -77,7 +77,7 @@ const Facilities = () => {
 
   return (
     <section className="overflow-hidden bg-white relative">
-      <h1 className="absolute top-12 right-20 text-black text-4xl lg:text-6xl font-bold z-20 font-serif italic text-white">
+      <h1 className="absolute top-12 right-20 text-4xl lg:text-6xl font-bold z-20 font-serif italic text-white">
         Facilities
       </h1>
       <div
