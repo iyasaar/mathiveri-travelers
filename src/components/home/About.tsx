@@ -125,7 +125,7 @@ const AboutSection = () => {
           className="col-span-1 relative h-[200px] lg:h-[300px] overflow-hidden"
         >
           <Image
-            src="/beaches/mathiveri-finolhu-beach/01.JPG"
+            src="/beaches/mathiveri-finolhu-beach/01.jpg"
             alt="Stone Texture"
             layout="fill"
             objectFit="cover"
@@ -139,7 +139,7 @@ const AboutSection = () => {
           className="col-span-2 relative h-[400px] lg:h-[600px] overflow-hidden"
         >
           <Image
-            src="/beaches/tourist-beach/01.jpg"
+            src="/beaches/tourist-beach/01.JPG"
             alt="Group of People"
             layout="fill"
             objectFit="cover"

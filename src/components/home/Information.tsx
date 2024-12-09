@@ -76,7 +76,7 @@ const Information = () => {
           {/* Left: Image */}
           <div className="image">
             <img
-              src="/people/01.jpg"
+              src="/people/01.JPG"
               alt="Local People"
               className="w-full rounded-lg shadow-md"
             />
