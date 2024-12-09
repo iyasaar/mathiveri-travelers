@@ -13,17 +13,52 @@ const AboutSection = () => {
     gsap.fromTo(
       headingRef.current,
       { opacity: 0, x: -50 },
-      { opacity: 1, x: 0, duration: 1, ease: "power2.out" }
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
     );
     gsap.fromTo(
       textRef.current,
       { opacity: 0, x: 50 },
-      { opacity: 1, x: 0, duration: 1, delay: 0.2, ease: "power2.out" }
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
     );
     gsap.fromTo(
       buttonRef.current,
       { opacity: 0, scale: 0.9 },
-      { opacity: 1, scale: 1, duration: 1, delay: 0.4, ease: "power2.out" }
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        delay: 0.4,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: buttonRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      }
     );
 
     // Animations for images
@@ -37,6 +72,12 @@ const AboutSection = () => {
           duration: 1,
           delay: 0.5 + index * 0.2,
           ease: "power2.out",
+          scrollTrigger: {
+            trigger: image,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
         }
       );
     });

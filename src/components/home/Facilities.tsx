@@ -104,10 +104,10 @@ const Facilities = () => {
                 <img
                   src={facility.image}
                   alt={facility.name}
-                  className="w-full h-full object-cover rounded-md shadow-lg"
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
                 />
                 {/* Bottom Overlay */}
-                <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black via-black/50 to-transparent rounded-b-md"></div>
+                <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black via-black/50 to-transparent rounded-b-lg"></div>
                 {/* Card Text */}
                 <h2 className="absolute bottom-4 left-4 text-white text-4xl font-bold z-10">
                   {facility.name.toUpperCase()}

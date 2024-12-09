@@ -10,6 +10,7 @@ import Lenis from "lenis";
 import { ReactLenis } from "lenis/react";
 import About from "@/components/home/About";
 import Facilities from "@/components/home/Facilities";
+import Information from "@/components/home/Information";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,9 +34,7 @@ const Home = () => {
         <Introduction />
         <About />
         <Facilities />
-        <div className="h-screen">
-
-        </div>
+        <Information />
       </div>
     </>
   );

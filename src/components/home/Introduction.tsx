@@ -39,6 +39,12 @@ const Introduction = () => {
         opacity: 0,
         stagger: 0.1,
         ease: "power2.out",
+        scrollTrigger: {
+          trigger: heading,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
       });
     });
   }, []);
