@@ -12,6 +12,7 @@ import About from "@/components/home/About";
 import Facilities from "@/components/home/Facilities";
 import Information from "@/components/home/Information";
 import Tourism from "@/components/home/Tourism";
+import Footer from "@/components/footer/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,6 +38,7 @@ const Home = () => {
         <Facilities />
         <Information />
         <Tourism />
+        {/* <Footer /> */}
       </div>
     </>
   );
