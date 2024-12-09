@@ -25,9 +25,9 @@ const fetchFacilities = () => {
       name: "Modern Medicine & Local Treatments",
       image: "/facilities/Modern-Medicine-&-Local-Treatments/01.jpg",
     },
-    { name: "Pharmacy", image: "/facilities/Pharmacy/01.png" },
+    { name: "Pharmacy", image: "/facilities/Pharmacy/01.PNG" },
     { name: "Photography", image: "/facilities/Photography/01.jpg" },
-    { name: "Traveling", image: "/facilities/Traveling/01.jpg" },
+    { name: "Traveling", image: "/facilities/Traveling/01.JPG" },
     {
       name: "Water Sports & Dive Centers",
       image: "/facilities/Water-Sports-&-Dive-Centers/01.jpeg",
