@@ -5,7 +5,10 @@ import { useEffect, useRef, useState } from "react";
 const fetchFacilities = () => {
   // Assuming the folder structure and images are in `public/facilities`
   const facilityFolders = [
-    { name: "Accommodation & Food", image: "/facilities/Accomodation-&-Food/01.jpg" },
+    {
+      name: "Accommodation & Food",
+      image: "/facilities/Accomodation-&-Food/01.jpg",
+    },
     { name: "ATM", image: "/facilities/ATM/01.jpg" },
     { name: "Children Park", image: "/facilities/Children-Park/01.jpg" },
     { name: "Excursion Trips", image: "/facilities/Exursion-Trips/01.jpg" },
@@ -13,7 +16,10 @@ const fetchFacilities = () => {
       name: "Hair Dressing & Spa Treatments",
       image: "/facilities/Hair-Dressing-&-Spa-Treatments/01.jpg",
     },
-    { name: "Indoor & Outdoor Gym", image: "/facilities/Indoor-&-Outdoor-Gym/01.jpg" },
+    {
+      name: "Indoor & Outdoor Gym",
+      image: "/facilities/Indoor-&-Outdoor-Gym/01.jpg",
+    },
     { name: "Land Sports", image: "/facilities/Land-Sports/01.jpg" },
     {
       name: "Modern Medicine & Local Treatments",
@@ -39,7 +45,6 @@ const Facilities = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-
     const facilitiesData = fetchFacilities();
     setFacilities(facilitiesData);
 
@@ -71,10 +76,13 @@ const Facilities = () => {
   }, []);
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden bg-white relative">
+      <h1 className="absolute top-12 right-20 text-black text-4xl lg:text-6xl font-bold z-20 font-serif italic">
+        Facilities
+      </h1>
       <div
         style={{
-          backgroundImage: `url('/activities/snorkeling/01.jpg')`,
+          backgroundImage: `url('01.png')`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -88,16 +96,20 @@ const Facilities = () => {
             <div
               key={index}
               className={`${
-                index % 2 === 0 ? "w-[40vw] h-[24vh]" : "w-[24vw] h-[40vh]"
+                index % 2 === 0 ? "w-[40vw] h-[80vh]" : "w-[40vw] h-[80vh]"
               } flex justify-center items-center`}
             >
               <div className="w-4/5 h-4/5 relative">
+                {/* Card Image */}
                 <img
                   src={facility.image}
                   alt={facility.name}
                   className="w-full h-full object-cover rounded-md shadow-lg"
                 />
-                <h2 className="absolute bottom-4 left-4 text-white text-4xl font-bold">
+                {/* Bottom Overlay */}
+                <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black via-black/50 to-transparent rounded-b-md"></div>
+                {/* Card Text */}
+                <h2 className="absolute bottom-4 left-4 text-white text-4xl font-bold z-10">
                   {facility.name.toUpperCase()}
                 </h2>
               </div>
