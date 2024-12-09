@@ -55,7 +55,7 @@ const Information = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-white py-16 px-8 md:px-16 overflow-hidden"
+      className="bg-white py-16 px-8 md:px-16 overflow-hidden min-h-screen flex items-center"
     >
       <div className="max-w-7xl mx-auto">
         {/* Intro Text */}

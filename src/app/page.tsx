@@ -11,6 +11,7 @@ import { ReactLenis } from "lenis/react";
 import About from "@/components/home/About";
 import Facilities from "@/components/home/Facilities";
 import Information from "@/components/home/Information";
+import Tourism from "@/components/home/Tourism";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,7 @@ const Home = () => {
         <About />
         <Facilities />
         <Information />
+        <Tourism />
       </div>
     </>
   );
