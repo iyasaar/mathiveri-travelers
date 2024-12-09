@@ -9,7 +9,7 @@ import Introduction from "@/components/home/Introduction";
 import Lenis from "lenis";
 import { ReactLenis } from "lenis/react";
 import About from "@/components/home/About";
-import Explore from "@/components/home/Explore";
+import Facilities from "@/components/home/Facilities";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +32,7 @@ const Home = () => {
         <Hero />
         <Introduction />
         <About />
-        <Explore />
+        <Facilities />
         <div className="h-screen">
 
         </div>
