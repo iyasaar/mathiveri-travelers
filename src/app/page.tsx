@@ -13,6 +13,7 @@ import Facilities from "@/components/home/Facilities";
 import Information from "@/components/home/Information";
 import Tourism from "@/components/home/Tourism";
 import Footer from "@/components/footer/Footer";
+import TourismRelated from "@/components/home/TourismRelated";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,6 +39,7 @@ const Home = () => {
         <Facilities />
         <Information />
         <Tourism />
+        {/* <TourismRelated /> */}
         {/* <Footer /> */}
       </div>
     </>
