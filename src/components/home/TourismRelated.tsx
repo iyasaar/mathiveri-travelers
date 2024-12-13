@@ -6,16 +6,35 @@ const TourismRelated = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Title animation
       gsap.fromTo(
-        ".ethos-text",
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", stagger: 0.2 }
+        ".ethos-title span",
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "power3.out" }
       );
 
+      // Intro text animation
       gsap.fromTo(
-        ".ethos-image",
-        { opacity: 0, scale: 0.9 },
-        { opacity: 1, scale: 1, duration: 1.5, ease: "power3.out", delay: 0.5 }
+        ".ethos-intro-text",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", delay: 0.5 }
+      );
+
+      // Large image parallax effect
+      gsap.to(".ethos-large-image", {
+        y: -50,
+        scrollTrigger: {
+          trigger: ".ethos-large-image",
+          start: "top bottom",
+          scrub: true,
+        },
+      });
+
+      // Large image text animation
+      gsap.fromTo(
+        ".ethos-text",
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 1.5, ease: "power3.out", delay: 0.7 }
       );
     }, sectionRef);
 
@@ -23,50 +42,66 @@ const TourismRelated = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative bg-[#F8F5F2] px-6 md:px-16 py-16"
-    >
-      {/* Small Image */}
-      <div className="absolute top-[-2rem] left-6 md:left-16">
-        <img
-          src="/introduction/01.jpg"
-          alt="Small Decorative"
-          className="w-96 h-96 object-cover ethos-image shadow-lg"
-        />
-      </div>
+    <section id="ethos" ref={sectionRef} className="relative bg-[#e0ebf3] ">
+      {/* Background */}
+      <div className="absolute inset-0 bg-bluebg z-0 will-change-transform"></div>
 
-      {/* Content Section */}
-      <div className="relative flex flex-col items-start mx-auto gap-8">
-        {/* Title and Description */}
-        <div className="flex w-full">
-          <div className="basis-1/4"></div>
-          <div className="mt-16 ">
-            <h2 className="text-3xl font-serif text-[#625D57] ethos-text">
-                Cuisine
+      {/* main container */}
+      <div
+        className="relative z-10 mx-auto"
+        style={{ width: `calc(100% - 15.5vw)` }}
+      >
+        {/* Small Image and Title */}
+        <div className="flex">
+          {/* Small Image */}
+          <div className="w-[22.5vw] h-[16.493vw] max-w-96  overflow-hidden -mt-[5vw] z-[999]">
+            <img
+              src="/finolhu/01.jpg"
+              alt="Ethos Small"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Title */}
+          <div className="text-4xl font-serif text-black ml-5 self-end mt-[1.6vw] will-change-transform">
+            <h2 className="flex overflow-hidden">
+              <p>Mathiveri Finolhu</p>
             </h2>
-            {/* <p className="mt-4 text-lg text-[#625D57] ethos-text">
-              Understated chic is our design ethos and subtle details are our
-              raison d’être.
-            </p> */}
           </div>
         </div>
 
-        {/* Large Image and Text */}
-        <div className="flex flex-col md:flex-row items-start gap-6">
+        {/* Intro Text */}
+        <blockquote
+          className="text-lg text-gray-600 font-light ethos-intro-text max-w-[600px] mt-[3vw] overflow-hidden leading-8 will-change-transform"
+          style={{ marginLeft: `calc(23.5vw)` }}
+        >
+          Mathiveri Finolhu is a stunning sandbank in the Mathiveri Lagoon,
+          easily accessible by walking or swimming from Mathiveri Island. This
+          picturesque sandbank features a few scattered trees and is surrounded
+          by pristine beaches, offering a serene escape with crystal-clear
+          waters and breathtaking views of the tropical paradise.
+        </blockquote>
+
+        {/* Content Section */}
+        <div className="flex">
           {/* Large Image */}
-          <img
-            src="/introduction/02.jpg"
-            alt="Living Room"
-            className="w-full md:w-2/3 h-auto object-cover ethos-image shadow-md"
-          />
+          <div className=" relative ml-[5vw] w-[56vw] h-[38vw] top-[10vw]">
+            <img
+              src="/finolhu/02.webp"
+              alt="Ethos Large"
+              className="w-full h-auto object-cover shadow-md"
+            />
+          </div>
 
           {/* Text beside Image */}
-          <div className="md:w-1/3">
-            <p className="text-lg text-[#625D57] ethos-text">
-              We ensure everything about your stay is immaculate, from the
-              pillowy white Etro cotton sheets dressing your bed to the
-              thoughtfully-placed garden-grown herb garnishes on your plate.
+          <div className="ml-[5vw] max-w-[500px] flex items-center mt-[10vw]">
+            <p className="text-lg text-gray-600 ethos-text">
+              Mathiveri Island is surrounded by vibrant coral reefs and a
+              picturesque lagoon, teeming with marine life. The clear, shallow
+              waters make it an ideal spot for snorkeling , diving and
+              watersports. Colorful fish, sea turtles, and diverse coral
+              formations offer an unforgettable underwater experience,
+              showcasing the Maldives' natural beauty.
             </p>
           </div>
         </div>

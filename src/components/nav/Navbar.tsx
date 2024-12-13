@@ -172,7 +172,7 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
           >
             {/* Menu Container */}
-            <div className="bg-nav w-[97%] h-[92%] opacity-80 rounded-lg shadow-lg grid grid-cols-5 gap-20 p-10">
+            <div className="bg-nav w-[97%] h-[92%] opacity-90 rounded-lg shadow-lg grid grid-cols-5 gap-20 p-10">
               {/* Left Column */}
               <motion.div
                 className="text-sm text-gray-600 space-y-4 flex flex-col"
