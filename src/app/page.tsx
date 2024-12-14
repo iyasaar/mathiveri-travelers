@@ -39,7 +39,7 @@ const Home = () => {
         <Facilities />
         <Information />
         <Tourism />
-        {/* <TourismRelated /> */}
+        <TourismRelated />
         {/* <Footer /> */}
       </div>
     </>

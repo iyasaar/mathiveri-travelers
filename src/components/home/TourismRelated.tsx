@@ -1,17 +1,24 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { AnimatePresence, motion } from "framer-motion";
+import SplitText from "@/components/Animations/Splittext";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const TourismRelated = () => {
   const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Title animation
-      gsap.fromTo(
-        ".ethos-title span",
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: "power3.out" }
-      );
+      // Title animation trigger setup
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top center", // Adjust start position as needed
+        onEnter: () => setIsVisible(true),
+        onLeaveBack: () => setIsVisible(false), // Reset if scrolling back
+      });
 
       // Intro text animation
       gsap.fromTo(
@@ -54,7 +61,7 @@ const TourismRelated = () => {
         {/* Small Image and Title */}
         <div className="flex">
           {/* Small Image */}
-          <div className="w-[22.5vw] h-[16.493vw] max-w-96  overflow-hidden -mt-[5vw] z-[999]">
+          <div className="w-[22.5vw] h-[16.493vw] max-w-96 overflow-hidden -mt-[5vw] z-[999]">
             <img
               src="/finolhu/01.jpg"
               alt="Ethos Small"
@@ -65,7 +72,30 @@ const TourismRelated = () => {
           {/* Title */}
           <div className="text-4xl font-serif text-black ml-5 self-end mt-[1.6vw] will-change-transform">
             <h2 className="flex overflow-hidden">
-              <p>Mathiveri Finolhu</p>
+              <AnimatePresence>
+                {isVisible && (
+                  <motion.div
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <SplitText
+                      initial={{ y: "100%" }}
+                      animate="visible"
+                      variants={{
+                        visible: (i: any) => ({
+                          y: 0,
+                          transition: {
+                            delay: i * 0.2,
+                          },
+                        }),
+                      }}
+                    >
+                      Mathiveri Finolhu
+                    </SplitText>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </h2>
           </div>
         </div>
@@ -85,7 +115,7 @@ const TourismRelated = () => {
         {/* Content Section */}
         <div className="flex">
           {/* Large Image */}
-          <div className=" relative ml-[5vw] w-[56vw] h-[38vw] top-[10vw]">
+          <div className="relative ml-[5vw] w-[56vw] h-[38vw] top-[10vw]">
             <img
               src="/finolhu/02.webp"
               alt="Ethos Large"
