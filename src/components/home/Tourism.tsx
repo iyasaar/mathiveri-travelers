@@ -51,7 +51,7 @@ const Tourism = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-white py-16 px-8 md:px-16 min-h-screen flex items-center"
+      className="bg-white py-16 px-8 md:px-16 min-h-screen flex items-center mb-48"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-52">
         {/* Left: Text Content */}

@@ -65,7 +65,7 @@ const TourismRelated = () => {
             <img
               src="/finolhu/01.jpg"
               alt="Ethos Small"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
 
@@ -119,7 +119,7 @@ const TourismRelated = () => {
             <img
               src="/finolhu/02.webp"
               alt="Ethos Large"
-              className="w-full h-auto object-cover shadow-md"
+              className="w-full h-auto object-cover shadow-md rounded-lg"
             />
           </div>
 
