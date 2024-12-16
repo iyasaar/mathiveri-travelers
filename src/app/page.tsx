@@ -15,6 +15,8 @@ import Tourism from "@/components/home/Tourism";
 import Footer from "@/components/footer/Footer";
 import TourismRelated from "@/components/home/TourismRelated";
 import GovtInstitutions from "@/components/home/GovtInstitutions";
+import ThingsToDo from "@/components/home/ThingsToDo";
+import Historical from "@/components/home/Historical";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +44,9 @@ const Home = () => {
         <Tourism />
         <TourismRelated />
         <GovtInstitutions />
-        {/* <Footer /> */}
+        <ThingsToDo />
+        <Historical />
+        <Footer />
       </div>
     </>
   );
