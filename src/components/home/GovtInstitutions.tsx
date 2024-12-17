@@ -18,7 +18,7 @@ const GovtInstitutions = () => {
       phone: "+960 6660058",
       email: "info@mathiveri.gov.mv",
       website: "https://mathiveri.gov.mv",
-      image: "/govt/council.JPG",
+      image: "/govt/council.jpg",
     },
     {
       id: 2,
