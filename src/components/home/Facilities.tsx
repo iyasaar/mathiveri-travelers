@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
+import { WhiteBtn } from "../generic/WhiteBtn";
 
 const fetchFacilities = () => {
   // Assuming the folder structure and images are in `public/facilities`
@@ -49,7 +50,7 @@ const Facilities = () => {
     setFacilities(facilitiesData);
 
     const totalWidth = facilitiesData.length * 35; // Assuming each card is 35vw wide
-    const endValue = `${totalWidth * 4}vw top`;
+    const endValue = `${totalWidth * 8}vw top`;
 
     const pin = gsap.fromTo(
       sectionRef.current,
@@ -77,9 +78,12 @@ const Facilities = () => {
 
   return (
     <section className="overflow-hidden bg-white relative">
-      <h1 className="absolute top-12 right-20 text-4xl lg:text-6xl font-bold z-20 font-serif italic text-white">
-        Facilities
-      </h1>
+      <div className="absolute top-12 right-20 z-20">
+        <h1 className="text-4xl lg:text-6xl font-bold  font-serif italic text-white">
+          Facilities
+        </h1>
+        <WhiteBtn>Discover more</WhiteBtn>
+      </div>
       <div
         style={{
           backgroundImage: `url('01.png')`,

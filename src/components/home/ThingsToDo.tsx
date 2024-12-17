@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BlackBtn } from "../generic/BlackBtn";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,14 +98,14 @@ const ThingsToDo = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen w-full flex flex-col bg-white mt-28"
+      className="min-h-screen w-full flex flex-col bg-white"
     >
       {/* Heading Area */}
       <div className="max-w-5xl mx-auto text-center mb-10 px-4">
-        <h2 className="text-base font-serif uppercase font-medium mb-2">
+        <h2 className="text-sm font-serif uppercase font-light mb-2">
           Things To Do
         </h2>
-        <h3 className="text-3xl md:text-4xl font-serif font-medium mb-4">
+        <h3 className="text-2xl md:text-4xl font-serif font-medium mb-4">
           Encounter Unforgettable Experiences
         </h3>
         <p className="text-gray-700 text-base leading-relaxed">
@@ -114,6 +115,7 @@ const ThingsToDo = () => {
           watersports, or the richness of local traditions, there is always
           something here to captivate your senses.
         </p>
+        <BlackBtn>Discover More</BlackBtn>
       </div>
 
       {/* Image Grid */}

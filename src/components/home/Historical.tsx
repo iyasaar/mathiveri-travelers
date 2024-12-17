@@ -1,4 +1,5 @@
 import React from "react";
+import { WhiteBtn } from "../generic/WhiteBtn";
 
 const Historical = () => {
   return (
@@ -27,11 +28,7 @@ const Historical = () => {
           Experience the rich tapestry of history through curated excursions
           that immerse you in timeless stories and enduring legacies.
         </p> */}
-        <button
-          className="mt-4 px-6 py-3 bg-transparent border border-white text-white hover:bg-white hover:text-gray-900 transition duration-300"
-        >
-          Discover more
-        </button>
+        <WhiteBtn>Discover More</WhiteBtn>
       </div>
     </div>
   );

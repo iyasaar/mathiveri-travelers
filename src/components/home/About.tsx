@@ -108,12 +108,6 @@ const AboutSection = () => {
             idyllic setting for an unforgettable getaway. And it's budget
             friendly.
           </p>
-          <button
-            ref={buttonRef}
-            className="mt-4 px-6 py-3 bg-transparent border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition duration-300"
-          >
-            Discover more
-          </button>
         </div>
       </div>
 

@@ -27,30 +27,27 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen">
-      <Navbar />
-      <div className="relative h-screen flex flex-col items-end">
-        {/* Background Image */}
-        <div className="absolute inset-0" ref={imageRef}>
-          <Image
-            src="/introduction/02.jpg"
-            alt="Mathiveri Islands"
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-        </div>
+    <div className="relative h-screen flex flex-col items-end">
+      {/* Background Image */}
+      <div className="absolute inset-0" ref={imageRef}>
+        <Image
+          src="/introduction/02.jpg"
+          alt="Mathiveri Islands"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+      </div>
 
-        {/* Text Section */}
-        <div className="relative z-10 flex flex-col justify-start items-end w-full h-full pr-12">
-          <div className="basis-1/5"></div>
-          <h1
-            className="text-white text-4xl md:text-6xl tracking-wide"
-            ref={textRef}
-          >
-            <span className={cedar.className}>Mathiveri Islands</span>
-          </h1>
-        </div>
+      {/* Text Section */}
+      <div className="relative z-10 flex flex-col justify-start items-end w-full h-full pr-12">
+        <div className="basis-1/5"></div>
+        <h1
+          className="text-white text-4xl md:text-6xl tracking-wide"
+          ref={textRef}
+        >
+          <span className={cedar.className}>Mathiveri Islands</span>
+        </h1>
       </div>
     </div>
   );

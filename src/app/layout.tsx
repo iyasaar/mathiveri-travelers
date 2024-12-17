@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Source_Sans_3, PT_Sans } from "next/font/google";
+import Navbar from "@/components/nav/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,10 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${ptSans.className}`}
-      >
-        {children}
+      <body className={`${ptSans.className}`}>
+        <div className="relative min-h-screen">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
