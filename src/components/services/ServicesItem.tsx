@@ -4,12 +4,14 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRouter } from "next/navigation";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const FacilitiesItem = ({ service }: any) => {
   const itemRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     const element = itemRef.current;
@@ -33,6 +35,10 @@ const FacilitiesItem = ({ service }: any) => {
     );
   }, []);
 
+  const handleRouteClick = (slug: any) => {
+    router.push(`/services/${slug}`);
+  };
+
   return (
     <div
       ref={itemRef}
@@ -53,7 +59,10 @@ const FacilitiesItem = ({ service }: any) => {
           {service.title}
         </h3>
         <p className="text-gray-600 mt-2">{service.description}</p>
-        <button className="mt-4 px-6 py-3 bg-transparent border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition duration-300">
+        <button
+          onClick={() => handleRouteClick(service.title)}
+          className="mt-4 px-6 py-3 bg-transparent border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition duration-300"
+        >
           Explore more
         </button>
       </div>
