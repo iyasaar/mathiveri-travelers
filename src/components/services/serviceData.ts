@@ -12,7 +12,7 @@ export const serviceData = [
     {
       id: 3,
       title: "Excursion",
-      image: "/services/excursion/01.jpg",
+      image: "/services/excursion/01.PNG",
     },
     {
       id: 4,
