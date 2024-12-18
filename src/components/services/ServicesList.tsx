@@ -1,16 +1,9 @@
 import { image } from "framer-motion/client";
 import ServicesItem from "./ServicesItem";
+import { serviceData } from "./serviceData";
 
 const ServicesList = () => {
-
-    const services = [
-        {
-            id: 1,
-            title: "Service 1",
-            description: "Description 1",
-            image: "/facilities/ATM/01.jpg",
-        }
-    ]
+  const services = serviceData;
 
   return (
     <div>
