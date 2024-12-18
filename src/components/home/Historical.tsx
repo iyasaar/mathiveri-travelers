@@ -3,7 +3,7 @@ import { WhiteBtn } from "../generic/WhiteBtn";
 
 const Historical = () => {
   return (
-    <div className="relative min-h-screen w-full flex items-center bg-black overflow-hidden">
+    <div className="relative min-h-screen w-full flex items-center bg-black overflow-hidden mt-20">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"

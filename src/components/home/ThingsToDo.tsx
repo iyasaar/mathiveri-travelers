@@ -98,7 +98,7 @@ const ThingsToDo = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen w-full flex flex-col bg-white"
+      className="min-h-screen w-full flex flex-col bg-white mt-20"
     >
       {/* Heading Area */}
       <div className="max-w-5xl mx-auto text-center mb-10 px-4">
