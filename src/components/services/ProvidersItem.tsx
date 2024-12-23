@@ -71,7 +71,11 @@ const ProvidersItem: React.FC<ProvidersItemProps> = ({ provider }) => {
           <li className="flex items-center">
             <FaGlobe className="text-main mr-2" />
             <a
-              href={provider.website}
+              href={
+                provider.website.startsWith("http")
+                  ? provider.website.replace(/^https?:\/\/(www\.)?/, "https://")
+                  : `https://${provider.website.replace(/^www\./, "")}`
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
