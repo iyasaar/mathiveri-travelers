@@ -25,10 +25,10 @@ const Provider = () => {
 
       <div className="py-12 px-6 md:px-12 lg:px-24 max-w-screen-2xl mx-auto">
         <h2 className="text-4xl font-medium font-serif mb-8">
-            {slug} Providers
+            Providers
         </h2>
 
-        <ProvidersList />
+        <ProvidersList slug={slug} />
       </div>
     </div>
   );

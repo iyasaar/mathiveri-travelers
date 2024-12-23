@@ -2,17 +2,24 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import ProvidersItem, { Provider } from "./ProvidersItem"; // Adjust the path as necessary
+import ProvidersItem, { Provider } from "./ProvidersItem";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { serviceData } from "./serviceData";
+import { providersData } from "./providersData";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const ProvidersList = ({ providers }: any) => {
+interface ProvidersListProps {
+  slug: any;
+}
+
+const ProvidersList: React.FC<ProvidersListProps> = ({ slug }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const providersData = serviceData;
+
+  const filteredProviders = providersData.filter(
+    (provider: any) => provider.slug.toLowerCase() === slug.toLowerCase()
+  );
 
   useEffect(() => {
     const container = containerRef.current;
@@ -77,7 +84,7 @@ const ProvidersList = ({ providers }: any) => {
     <div className="container mx-auto px-4 py-8" ref={containerRef}>
       {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {providersData.map((provider: any) => (
+        {filteredProviders.map((provider: any) => (
           <div key={provider.id} className="provider-card">
             <ProvidersItem provider={provider} />
           </div>

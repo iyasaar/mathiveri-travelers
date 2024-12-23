@@ -60,7 +60,7 @@ const FacilitiesItem = ({ service }: any) => {
         </h3>
         <p className="text-gray-600 mt-2">{service.description}</p>
         <button
-          onClick={() => handleRouteClick(service.title)}
+          onClick={() => handleRouteClick(service.slug)}
           className="mt-4 px-6 py-3 bg-transparent border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition duration-300"
         >
           Explore more

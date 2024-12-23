@@ -83,12 +83,12 @@ const ProvidersItem: React.FC<ProvidersItemProps> = ({ provider }) => {
       </ul>
 
       {/* Explore More Button */}
-      <button
+      {/* <button
         onClick={() => handleRouteClick(provider.slug)}
         className="mt-auto px-6 py-3 bg-transparent border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition duration-300 rounded"
       >
         Explore more
-      </button>
+      </button> */}
     </div>
   );
 };
