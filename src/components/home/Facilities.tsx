@@ -49,7 +49,7 @@ const Facilities = () => {
     const facilitiesData = fetchFacilities();
     setFacilities(facilitiesData);
 
-    const totalWidth = facilitiesData.length * 35; // Assuming each card is 35vw wide
+    const totalWidth = (facilitiesData.length - 3.3) * 35;
     const endValue = `${totalWidth * 8}vw top`;
 
     const pin = gsap.fromTo(
