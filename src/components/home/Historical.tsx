@@ -1,7 +1,9 @@
 import React from "react";
 import { WhiteBtn } from "../generic/WhiteBtn";
+import { useRouter } from "next/navigation";
 
 const Historical = () => {
+  const router = useRouter();
   return (
     <div className="relative min-h-screen w-full flex items-center bg-black overflow-hidden mt-20">
       {/* Background image */}
@@ -28,7 +30,7 @@ const Historical = () => {
           Experience the rich tapestry of history through curated excursions
           that immerse you in timeless stories and enduring legacies.
         </p> */}
-        <WhiteBtn>Discover More</WhiteBtn>
+        <WhiteBtn onClickEvent={() => router.push('/landmarks')}>Discover More</WhiteBtn>
       </div>
     </div>
   );

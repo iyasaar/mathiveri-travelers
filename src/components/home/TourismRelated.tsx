@@ -49,9 +49,9 @@ const TourismRelated = () => {
   }, []);
 
   return (
-    <section id="ethos" ref={sectionRef} className="relative bg-[#e0ebf3] ">
+    <section id="ethos" ref={sectionRef} className="relative bg-[#e0ebf3]/25 ">
       {/* Background */}
-      <div className="absolute inset-0 bg-bluebg z-0 will-change-transform"></div>
+      <div className="absolute inset-0 bg-bluebg/25 z-0 will-change-transform"></div>
 
       {/* main container */}
       <div

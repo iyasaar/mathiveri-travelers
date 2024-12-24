@@ -3,7 +3,7 @@ import ServicesItem from "./ServicesItem";
 import { serviceData } from "./serviceData";
 
 const ServicesList = () => {
-  const services = serviceData;
+  const services = serviceData.sort((a, b) => a.id - b.id);
 
   return (
     <div>

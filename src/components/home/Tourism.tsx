@@ -71,9 +71,9 @@ const Tourism = () => {
             between the two islands, and the vibrancy of the island's shallow
             lagoon.
           </blockquote>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <BlackBtn>Discover more</BlackBtn>
-          </div>
+          </div> */}
         </div>
 
         {/* Right: Images */}

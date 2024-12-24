@@ -2,12 +2,14 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BlackBtn } from "../generic/BlackBtn";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ThingsToDo = () => {
   const sectionRef = useRef<any>(null);
   const imagesRef = useRef<any>([]);
+  const router = useRouter();
 
   const images = [
     {
@@ -115,11 +117,11 @@ const ThingsToDo = () => {
           watersports, or the richness of local traditions, there is always
           something here to captivate your senses.
         </p>
-        <BlackBtn>Discover More</BlackBtn>
+        <BlackBtn onClickEvent={() => router.push('/services')}>Discover More</BlackBtn>
       </div>
 
       {/* Image Grid */}
-      <div className="flex-grow px-4 pb-4 max-w-screen-lg h-80 self-center">
+      <div className="flex-grow px-4 pb-4 max-w-screen-2xl h-80 self-center">
         <div className="grid grid-cols-4 grid-rows-2 gap-2 w-full h-full">
           {images.map((img, index) => (
             <div

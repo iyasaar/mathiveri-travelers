@@ -2,6 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import { WhiteBtn } from "../generic/WhiteBtn";
+import { useRouter } from "next/navigation";
 
 const fetchFacilities = () => {
   // Assuming the folder structure and images are in `public/facilities`
@@ -42,6 +43,7 @@ const Facilities = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
   const [facilities, setFacilities] = useState<any>([]);
+  const router = useRouter();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -82,7 +84,9 @@ const Facilities = () => {
         <h1 className="text-4xl lg:text-6xl font-bold  font-serif italic text-white">
           Facilities
         </h1>
-        <WhiteBtn>Discover more</WhiteBtn>
+        <WhiteBtn onClickEvent={() => router.push("/facilities")}>
+          Discover more
+        </WhiteBtn>
       </div>
       <div
         style={{
