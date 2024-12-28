@@ -51,7 +51,7 @@ const TourismRelated = () => {
   return (
     <section id="ethos" ref={sectionRef} className="relative bg-[#e0ebf3]/25 ">
       {/* Background */}
-      <div className="absolute inset-0 bg-bluebg/25 z-0 will-change-transform"></div>
+      <div className="absolute inset-0 bg-bluebg/0 z-0 will-change-transform"></div>
 
       {/* main container */}
       <div
@@ -61,7 +61,7 @@ const TourismRelated = () => {
         {/* Small Image and Title */}
         <div className="flex">
           {/* Small Image */}
-          <div className="w-[22.5vw] h-[16.493vw] max-w-96 overflow-hidden -mt-[5vw] z-[999]">
+          <div className="md:w-[22.5vw] md:h-[16.493vw] max-w-96 overflow-hidden -mt-[5vw] z-[999]">
             <img
               src="/finolhu/01.jpg"
               alt="Ethos Small"
@@ -101,10 +101,7 @@ const TourismRelated = () => {
         </div>
 
         {/* Intro Text */}
-        <blockquote
-          className="text-lg text-gray-600 font-light ethos-intro-text max-w-[600px] mt-[3vw] overflow-hidden leading-8 will-change-transform"
-          style={{ marginLeft: `calc(23.5vw)` }}
-        >
+        <blockquote className="text-lg text-gray-600 font-light ethos-intro-text max-w-[600px] mt-[3vw] overflow-hidden leading-8 will-change-transform ml-[0] md:ml-[calc(23.5vw)]">
           Mathiveri Finolhu is a stunning sandbank in the Mathiveri Lagoon,
           easily accessible by walking or swimming from Mathiveri Island. This
           picturesque sandbank features a few scattered trees and is surrounded
@@ -113,9 +110,9 @@ const TourismRelated = () => {
         </blockquote>
 
         {/* Content Section */}
-        <div className="flex">
+        <div className="flex md:flex-row flex-col">
           {/* Large Image */}
-          <div className="relative ml-[5vw] w-[56vw] h-[38vw] top-[10vw]">
+          <div className="relative md:ml-[5vw] md:w-[56vw] md:h-[38vw] mt-6 md:top-[10vw]">
             <img
               src="/finolhu/02.webp"
               alt="Ethos Large"
@@ -124,7 +121,7 @@ const TourismRelated = () => {
           </div>
 
           {/* Text beside Image */}
-          <div className="ml-[5vw] max-w-[500px] flex items-center mt-[10vw]">
+          <div className="md:ml-[5vw] md:max-w-[500px] flex items-center mt-[10vw] pb-10 md:pb-0">
             <p className="text-lg text-gray-600 ethos-text">
               Mathiveri Island is surrounded by vibrant coral reefs and a
               picturesque lagoon, teeming with marine life. The clear, shallow
