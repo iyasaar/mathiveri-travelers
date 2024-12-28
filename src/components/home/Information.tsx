@@ -55,12 +55,12 @@ const Information = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-white py-16 px-8 md:px-16 overflow-hidden min-h-screen flex items-center"
+      className="bg-white py-16 px-6 sm:px-8 md:px-16 overflow-hidden min-h-screen flex items-center"
     >
       <div className="max-w-7xl mx-auto">
         {/* Intro Text */}
         <div className="mb-12 intro-text">
-          <h2 className="text-xl md:text-3xl font-serif font-light text-black">
+          <h2 className="text-base md:text-lg lg:text-xl font-serif font-light text-black leading-relaxed">
             Mathiveri Island is Located in the Western Part of Ari Atoll, at
             4.191833 degrees north and 72.746139 degrees east, and belongs to
             North Ari Atoll. The code assigned to this island is U5. Mathiveri
@@ -84,10 +84,10 @@ const Information = () => {
 
           {/* Right: Text */}
           <div className="text-content">
-            <h3 className="text-2xl md:text-4xl font-serif font-medium text-black mb-4">
+            <h3 className="text-xl md:text-2xl lg:text-4xl font-serif font-medium text-black mb-4">
               Local Life
             </h3>
-            <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed">
               Mathiveri is home to a modest population, primarily made up of
               Maldivian locals. The island's community is known for its warm
               hospitality and traditional lifestyle, which revolves around

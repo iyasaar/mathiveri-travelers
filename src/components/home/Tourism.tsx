@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { BlackBtn } from "../generic/BlackBtn";
 
 const Tourism = () => {
   const sectionRef = useRef(null);
@@ -52,9 +51,9 @@ const Tourism = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-white py-16 px-8 md:px-16 min-h-screen flex items-center mb-48"
+      className="bg-white py-16 px-6 sm:px-8 md:px-16 min-h-screen flex items-center mb-48"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-52">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-16 md:gap-52">
         {/* Left: Text Content */}
         <div>
           <h2 className="text-2xl md:text-4xl font-serif font-light text-black mb-6 leading-snug">
@@ -67,13 +66,10 @@ const Tourism = () => {
             lot to offer in terms of natural beauty, one of the special features
             that visitors to the island highlights is the island's natural
             beauty and cleaning efforts carried out by women of the island, the
-            nearby mathiveri finolhu (mathiveri sandbank), the beautiful lagoon
+            nearby Mathiveri Finolhu (Mathiveri sandbank), the beautiful lagoon
             between the two islands, and the vibrancy of the island's shallow
             lagoon.
           </blockquote>
-          {/* <div className="flex space-x-4">
-            <BlackBtn>Discover more</BlackBtn>
-          </div> */}
         </div>
 
         {/* Right: Images */}
@@ -82,13 +78,13 @@ const Tourism = () => {
           <img
             src="/activities/excursion/01.png"
             alt="Lake View"
-            className="large-image rounded-lg shadow-md w-full md:w-[90%] ml-auto"
+            className="large-image rounded-lg shadow-md w-[90%] md:w-[85%] ml-auto"
           />
           {/* Smaller Foreground Image */}
           <img
             src="/activities/snorkeling/01.jpg"
             alt="Closer Lake View"
-            className="small-image rounded-lg shadow-md w-2/3 absolute -bottom-36 -left-32 md:w-[50%]"
+            className="small-image rounded-lg shadow-md w-[50%] absolute -bottom-36 -left-2 md:w-[45%] md:-bottom-28 md:-left-20 z-10"
           />
         </div>
       </div>
