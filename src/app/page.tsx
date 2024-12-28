@@ -46,7 +46,6 @@ const Home = () => {
         <GovtInstitutions />
         <ThingsToDo />
         <Historical />
-        <Footer />
       </div>
     </>
   );
