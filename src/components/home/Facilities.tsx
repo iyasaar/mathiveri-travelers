@@ -5,7 +5,6 @@ import { WhiteBtn } from "../generic/WhiteBtn";
 import { useRouter } from "next/navigation";
 
 const fetchFacilities = () => {
-  // Assuming the folder structure and images are in `public/facilities`
   const facilityFolders = [
     {
       name: "Accommodation & Food",
@@ -51,43 +50,70 @@ const Facilities = () => {
     const facilitiesData = fetchFacilities();
     setFacilities(facilitiesData);
 
-    const totalWidth = (facilitiesData.length - 3.3) * 35;
-    const endValue = `${totalWidth * 8}vw top`;
+    const mm = gsap.matchMedia(); // Responsive adjustments with matchMedia
 
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: 0,
-      },
-      {
-        translateX: `-${totalWidth}vw`,
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top top",
-          end: endValue,
-          scrub: 1,
-          pin: true,
-        },
-      }
-    );
+    mm.add("(min-width: 768px)", () => {
+      // GSAP for larger screens
+      const totalWidth = (facilitiesData.length - 3.3) * 35;
+      const endValue = `${totalWidth * 8}vw top`;
 
-    return () => {
-      pin.kill();
-    };
+      gsap.fromTo(
+        sectionRef.current,
+        { translateX: 0 },
+        {
+          translateX: `-${totalWidth}vw`,
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: "top top",
+            end: endValue,
+            scrub: 1,
+            pin: true,
+          },
+        }
+      );
+    });
+
+    mm.add("(max-width: 767px)", () => {
+      // GSAP for smaller screens (mobile)
+      const totalWidth = (facilitiesData.length - 3.3) * 80; // Adjust for 60vw width
+      const endValue = `${totalWidth * 4}vw top`; // Shorter scroll distance for mobile
+
+      gsap.fromTo(
+        sectionRef.current,
+        { translateX: 0 },
+        {
+          translateX: `-${totalWidth}vw`,
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: "top top",
+            end: endValue,
+            scrub: 1,
+            pin: true,
+          },
+        }
+      );
+    });
+
+    return () => mm.revert(); // Clean up matchMedia instances
   }, []);
 
   return (
     <section className="overflow-hidden bg-white relative">
-      <div className="absolute top-12 right-20 z-20">
-        <h1 className="text-4xl lg:text-6xl font-bold  font-serif italic text-white">
+      {/* Heading and Button */}
+      <div className="absolute top-12 right-5 md:right-20 z-20">
+        <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold font-serif italic text-white">
           Facilities
         </h1>
         <WhiteBtn onClickEvent={() => router.push("/facilities")}>
           Discover more
         </WhiteBtn>
       </div>
+
+      {/* Scrolling Section */}
       <div
         style={{
           backgroundImage: `url('01.png')`,
@@ -98,14 +124,12 @@ const Facilities = () => {
       >
         <div
           ref={sectionRef}
-          className="h-screen w-[400vw] flex relative items-end"
+          className="h-screen w-[850vw] md:w-[400vw] flex relative items-end"
         >
           {facilities.map((facility: any, index: any) => (
             <div
               key={index}
-              className={`${
-                index % 2 === 0 ? "w-[40vw] h-[80vh]" : "w-[40vw] h-[80vh]"
-              } flex justify-center items-center`}
+              className={`w-[65vw] md:w-[40vw] h-[40vh] md:h-[80vh] flex justify-center items-center`}
             >
               <div className="w-4/5 h-4/5 relative">
                 {/* Card Image */}
@@ -117,7 +141,7 @@ const Facilities = () => {
                 {/* Bottom Overlay */}
                 <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black via-black/50 to-transparent rounded-b-lg"></div>
                 {/* Card Text */}
-                <h2 className="absolute bottom-4 left-4 text-white text-4xl font-bold z-10">
+                <h2 className="absolute bottom-4 left-4 text-white text-xl md:text-4xl font-bold z-10">
                   {facility.name.toUpperCase()}
                 </h2>
               </div>
