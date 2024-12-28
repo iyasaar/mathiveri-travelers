@@ -16,21 +16,41 @@ const Introduction = () => {
   const headingRefs = useRef<any>([]);
 
   useEffect(() => {
-    // Parallax effect for each image
-    imageRefs.current.forEach((image: any) => {
-      gsap.to(image, {
-        y: "-50%",
-        ease: "none",
-        scrollTrigger: {
-          trigger: image,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
+    const mm = gsap.matchMedia(); // Create a matchMedia instance
+
+    mm.add("(min-width: 640px)", () => {
+      // Parallax effect for larger screens
+      imageRefs.current.forEach((image: any) => {
+        gsap.to(image, {
+          y: "-50%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: image,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
       });
     });
 
-    // Fade and Slide effect for the texts
+    mm.add("(max-width: 639px)", () => {
+      // Reduced parallax effect for smaller screens
+      imageRefs.current.forEach((image: any) => {
+        gsap.to(image, {
+          y: "-20%", // Less translation for mobile
+          ease: "none",
+          scrollTrigger: {
+            trigger: image,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      });
+    });
+
+    // Fade and Slide effect for the texts (applies to all screens)
     headingRefs.current.forEach((heading: any) => {
       const splitText = new SplitType(heading, { types: "chars" });
       gsap.from(splitText.chars, {
@@ -47,6 +67,8 @@ const Introduction = () => {
         },
       });
     });
+
+    return () => mm.revert(); // Clean up matchMedia instances
   }, []);
 
   return (
@@ -56,7 +78,7 @@ const Introduction = () => {
     >
       {/* First Row - LOOK + Panoramic Image */}
       <div
-        className={`font-serif italic font-light container pt-8 space-y-4 text-black`}
+        className={`font-serif italic font-light container pt-8 md:space-y-4 text-black`}
       >
         <div className="grid grid-cols-12 gap-4 items-center ">
           <div className="col-span-7 md:self-end self-start">
@@ -89,7 +111,7 @@ const Introduction = () => {
         </div>
 
         {/* Second Row - Panoramic Image + TO */}
-        <div className="grid grid-cols-12 gap-4 items-center md:mt-0 -mt-14">
+        <div className="grid grid-cols-12 gap-4 items-center md:mt-0 -mt-8">
           {/* Parallax Image */}
           <div className="col-span-9 relative h-[22vh] overflow-hidden rounded-lg">
             <div
@@ -123,7 +145,7 @@ const Introduction = () => {
         <div className="grid grid-cols-12 gap-4 items-center ">
           <div className="col-span-4 relative h-[20vh] hidden md:block"></div>
           <div className="md:col-span-8 col-span-10">
-            <div className="flex flex-col items-start mt-14 md:-mt-14">
+            <div className="flex flex-col items-start mt-10 md:-mt-14">
               <h1
                 ref={(el) => headingRefs.current.push(el)}
                 className="text-[40px] md:text-[100px] font-extralight"
