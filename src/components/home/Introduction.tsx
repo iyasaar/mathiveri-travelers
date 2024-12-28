@@ -56,16 +56,16 @@ const Introduction = () => {
     >
       {/* First Row - LOOK + Panoramic Image */}
       <div
-        className={`${bebasNeue.className} container pt-8 space-y-4 text-black`}
+        className={`font-serif italic font-light container pt-8 space-y-4 text-black`}
       >
         <div className="grid grid-cols-12 gap-4 items-center ">
-          <div className="col-span-7 self-end">
+          <div className="col-span-7 md:self-end self-start">
             <div className="flex flex-col items-end mr-10 ">
               <h1
                 ref={(el) => headingRefs.current.push(el)}
-                className="text-[120px] md:text-[160px] font-extralight"
+                className="text-[40px] md:text-[100px] font-extralight"
               >
-                WELCOME
+                Welcome
               </h1>
             </div>
           </div>
@@ -89,7 +89,7 @@ const Introduction = () => {
         </div>
 
         {/* Second Row - Panoramic Image + TO */}
-        <div className="grid grid-cols-12 gap-4 items-center">
+        <div className="grid grid-cols-12 gap-4 items-center md:mt-0 -mt-14">
           {/* Parallax Image */}
           <div className="col-span-9 relative h-[22vh] overflow-hidden rounded-lg">
             <div
@@ -111,9 +111,9 @@ const Introduction = () => {
             <div className="flex flex-col items-start">
               <h1
                 ref={(el) => headingRefs.current.push(el)}
-                className="text-[120px] md:text-[80px] font-extralight"
+                className="text-[40px] md:text-[80px] font-extralight"
               >
-                TO
+                To
               </h1>
             </div>
           </div>
@@ -121,14 +121,14 @@ const Introduction = () => {
 
         {/* Third Row - MATHIVERI */}
         <div className="grid grid-cols-12 gap-4 items-center ">
-          <div className="col-span-4 relative h-[20vh]"></div>
-          <div className="col-span-8">
-            <div className="flex flex-col items-start -mt-14">
+          <div className="col-span-4 relative h-[20vh] hidden md:block"></div>
+          <div className="md:col-span-8 col-span-10">
+            <div className="flex flex-col items-start mt-14 md:-mt-14">
               <h1
                 ref={(el) => headingRefs.current.push(el)}
-                className="text-[120px] md:text-[160px] font-extralight"
+                className="text-[40px] md:text-[100px] font-extralight"
               >
-                MATHIVERI
+                Mathiveri Island
               </h1>
             </div>
           </div>

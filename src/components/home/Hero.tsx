@@ -40,10 +40,10 @@ const Hero = () => {
       </div>
 
       {/* Text Section */}
-      <div className="relative z-10 flex flex-col justify-start items-end w-full h-full pr-12">
+      <div className="relative z-10 flex flex-col justify-start items-end w-full h-full pr-4 sm:pr-8 md:pr-12">
         <div className="basis-1/5"></div>
         <h1
-          className="text-white text-4xl md:text-6xl tracking-wide"
+          className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wide"
           ref={textRef}
         >
           <span className={cedar.className}>Mathiveri Islands</span>
