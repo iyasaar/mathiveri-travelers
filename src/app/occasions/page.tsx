@@ -1,7 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import { occasionsData } from "@/components/occasions/data";
 
@@ -15,11 +13,10 @@ const fadeInUp = {
 };
 
 export default function OccasionsPage() {
-
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-screen bg-gray-50">
       {/* HERO SECTION */}
-      <section className="relative h-[200px] w-full">
+      <section className="relative h-[200px] md:h-[300px] w-full">
         <Image
           src="/occasions/01.jpg"
           alt="Mathiveri Island Occasions Hero"
@@ -29,14 +26,14 @@ export default function OccasionsPage() {
           className="opacity-80"
         />
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-4xl font-bold uppercase font-serif">
+          <h1 className="text-white text-center text-3xl md:text-5xl font-bold uppercase font-serif tracking-wide">
             Celebrate in Mathiveri
           </h1>
         </div>
       </section>
 
-      {/* OCCASIONS SECTIONS */}
-      <section className="max-w-6xl mx-auto px-4 py-16 space-y-16">
+      {/* OCCASIONS SECTION */}
+      <section className="max-w-6xl mx-auto px-4 md:px-8 lg:px-16 py-16 space-y-16">
         {occasionsData.map((occasion, index) => {
           const imageOnLeft = index % 2 === 0;
           return (
@@ -51,7 +48,7 @@ export default function OccasionsPage() {
               viewport={{ once: true }}
             >
               {/* IMAGE */}
-              <div className="w-full md:w-1/2 relative h-64 md:h-96">
+              <div className="w-full md:w-1/2 relative h-64 md:h-80 lg:h-96">
                 <Image
                   src={occasion.image}
                   alt={occasion.title}
@@ -62,11 +59,11 @@ export default function OccasionsPage() {
               </div>
 
               {/* TEXT */}
-              <div className="w-full md:w-1/2">
-                <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+              <div className="w-full md:w-1/2 text-center md:text-left">
+                <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
                   {occasion.title}
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                   {occasion.description}
                 </p>
               </div>
