@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BlackBtn } from "../generic/BlackBtn";
@@ -77,7 +77,6 @@ const ThingsToDo = () => {
       });
 
       // Parallax effect on images
-      // Move images slightly on scroll
       imagesRef.current.forEach((img: any) => {
         gsap.to(img, {
           y: -10,
@@ -110,19 +109,21 @@ const ThingsToDo = () => {
         <h3 className="text-2xl md:text-4xl font-serif font-medium mb-4">
           Encounter Unforgettable Experiences
         </h3>
-        <p className="text-gray-700 text-base leading-relaxed">
+        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
           Immerse yourself in a world of activities that celebrate the natural
           beauty, culture, and adventure of this unique destination. Whether
           you're drawn to the serenity of pristine beaches, the thrill of
           watersports, or the richness of local traditions, there is always
           something here to captivate your senses.
         </p>
-        <BlackBtn onClickEvent={() => router.push('/services')}>Discover More</BlackBtn>
+        <BlackBtn onClickEvent={() => router.push("/services")}>
+          Discover More
+        </BlackBtn>
       </div>
 
       {/* Image Grid */}
-      <div className="flex-grow px-4 pb-4 max-w-screen-2xl h-80 self-center">
-        <div className="grid grid-cols-4 grid-rows-2 gap-2 w-full h-full">
+      <div className="flex-grow px-4 pb-4 max-w-screen-2xl sm:h-80 h-full self-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 grid-rows-2 gap-2 w-full h-full">
           {images.map((img, index) => (
             <div
               key={index}
