@@ -101,7 +101,7 @@ const TourismRelated = () => {
         </div>
 
         {/* Intro Text */}
-        <blockquote className="text-lg text-gray-600 font-light ethos-intro-text max-w-[600px] mt-[3vw] overflow-hidden leading-8 will-change-transform ml-[0] md:ml-[calc(23.5vw)]">
+        <blockquote className="text-base md:text-lg text-gray-600 font-light ethos-intro-text max-w-[600px] mt-[3vw] overflow-hidden leading-8 will-change-transform ml-[0] md:ml-[calc(23.5vw)]">
           Mathiveri Finolhu is a stunning sandbank in the Mathiveri Lagoon,
           easily accessible by walking or swimming from Mathiveri Island. This
           picturesque sandbank features a few scattered trees and is surrounded
@@ -122,10 +122,10 @@ const TourismRelated = () => {
 
           {/* Text beside Image */}
           <div className="md:ml-[5vw] md:max-w-[500px] flex items-center mt-[10vw] pb-10 md:pb-0">
-            <p className="text-lg text-gray-600 ethos-text">
+            <p className="text-base md:text-lg text-gray-600 ethos-text leading-8 will-change-transform">
               Mathiveri Island is surrounded by vibrant coral reefs and a
               picturesque lagoon, teeming with marine life. The clear, shallow
-              waters make it an ideal spot for snorkeling , diving and
+              waters make it an ideal spot for snorkeling, diving, and
               watersports. Colorful fish, sea turtles, and diverse coral
               formations offer an unforgettable underwater experience,
               showcasing the Maldives' natural beauty.
