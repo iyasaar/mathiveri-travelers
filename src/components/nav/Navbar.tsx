@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
@@ -14,6 +15,7 @@ const navItems = [
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const pathname = usePathname();
 
   const topLineVariants = {
     closed: { rotate: 0, y: 0 },
@@ -54,6 +56,8 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const isActiveRoute = (href: string) => pathname === href;
 
   return (
     <>
@@ -102,11 +106,12 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className={`${
-                scrollPosition > 0 ? "text-black" : "text-white"
-              } hover:text-main transition-colors px-2 py-1 ${
-                // Replace with your logic for active route
-                item.name === "Home" ? "text-main" : ""
+              className={`px-2 py-1 transition-colors ${
+                isActiveRoute(item.href)
+                  ? "text-main font-medium"
+                  : scrollPosition > 0
+                  ? "text-black hover:text-main"
+                  : "text-white hover:text-main"
               }`}
             >
               {item.name}
@@ -157,8 +162,9 @@ const Navbar = () => {
                     href={item.href}
                     variants={menuItemVariants}
                     className={`block text-xl py-2 border-b border-gray-200 hover:text-main ${
-                      // Replace with your logic for active route
-                      item.name === "Home" ? "text-main" : "text-gray-700"
+                      isActiveRoute(item.href)
+                        ? "text-main font-medium"
+                        : "text-gray-700"
                     }`}
                   >
                     {item.name}
