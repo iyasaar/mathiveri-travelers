@@ -19,11 +19,11 @@ const Historical = () => {
       <div className="pointer-events-none absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent"></div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 max-w-4xl self-start mt-32 justify-self-start ml-32  text-left px-4">
-        <h1 className="text-white font-serif text-4xl md:text-7xl font-light mb-8">
+      <div className="relative z-10 max-w-4xl self-start mt-32 justify-self-start md:ml-32  text-left px-4">
+        <h1 className="text-white font-serif text-4xl md:text-7xl font-light mb-2 md:mb-8">
           Discover Historical
         </h1>
-        <h1 className="text-white font-serif text-4xl md:text-7xl font-light mb-8">
+        <h1 className="text-white font-serif text-4xl md:text-7xl font-light mb-4 md:mb-8">
           Treasures
         </h1>
         {/* <p className="text-white text-sm md:text-base mb-6 max-w-xl mx-auto">
