@@ -138,7 +138,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isExpanded && (
           <motion.div
-            className="fixed inset-0 bg-white z-40 flex flex-col lg:hidden mt-14"
+            className="fixed inset-0 bg-white z-40 flex flex-col lg:hidden mt-11"
             initial="closed"
             animate="open"
             exit="closed"

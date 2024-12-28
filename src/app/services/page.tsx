@@ -6,11 +6,11 @@ const ServicesPage = () => {
     <div className="min-h-screen">
       {/* Header Section */}
       <div
-        className="h-[200px] bg-cover bg-center relative"
+        className="md:h-[200px] h-[150px] bg-cover bg-center relative"
         style={{
           backgroundImage: `url('/bg.jpg')`,
           backgroundRepeat: "repeat-x",
-          backgroundSize: "60%",
+          backgroundSize: "100%",
           backgroundPosition: "center",
         }}
       >

@@ -8,7 +8,7 @@ const Provider = () => {
     <div className="min-h-screen">
       {/* Header Section */}
       <div
-        className="h-[200px] bg-cover bg-center relative"
+        className="md:h-[200px] h-[150px] bg-cover bg-center relative"
         style={{
           backgroundImage: `url('/bg2.jpg')`,
           backgroundRepeat: "no-repeat",
@@ -24,9 +24,7 @@ const Provider = () => {
       </div>
 
       <div className="py-12 px-6 md:px-12 lg:px-24 max-w-screen-2xl mx-auto">
-        <h2 className="text-4xl font-medium font-serif mb-8">
-            Providers
-        </h2>
+        <h2 className="text-4xl font-medium font-serif mb-8">Providers</h2>
 
         <ProvidersList slug={slug} />
       </div>

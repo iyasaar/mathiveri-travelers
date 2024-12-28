@@ -27,7 +27,7 @@ const FacilitiesItem = ({ service }: any) => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: element,
-          start: "top 90%", // Trigger animation when 80% of the item enters the viewport
+          start: "top 90%", // Trigger animation when 90% of the item enters the viewport
           end: "top 50%",
           toggleActions: "play none none reverse", // Play animation and reverse on scroll back
         },
@@ -42,26 +42,29 @@ const FacilitiesItem = ({ service }: any) => {
   return (
     <div
       ref={itemRef}
-      className="flex flex-col md:flex-row gap-6 items-center mb-12"
+      className="flex flex-col md:flex-row gap-6 items-start md:items-center mb-12"
     >
-      {/* Uniform Image */}
+      {/* Image */}
       <Image
         src={service.image}
         width={400}
         height={300}
         alt={service.title}
-        className="rounded-lg object-cover w-full md:w-[400px] h-[250px]"
+        className="rounded-lg object-cover w-full md:w-[400px] h-[250px] shadow-md"
       />
 
       {/* Content */}
-      <div className="flex-1">
-        <h3 className="text-2xl font-semibold text-gray-800">
+      <div className="flex-1 text-left">
+        <h3 className="text-xl md:text-2xl font-semibold text-gray-800">
           {service.title}
         </h3>
-        <p className="text-gray-600 mt-2">{service.description}</p>
+        <p className="text-sm md:text-base text-gray-600 mt-2 leading-relaxed">
+          {service.description}
+        </p>
         <button
           onClick={() => handleRouteClick(service.slug)}
-          className="mt-4 px-6 py-3 bg-transparent border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition duration-300"
+          aria-label={`Explore more about ${service.title}`}
+          className="mt-4 px-6 py-3 bg-transparent border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white rounded transition duration-300"
         >
           Explore more
         </button>
