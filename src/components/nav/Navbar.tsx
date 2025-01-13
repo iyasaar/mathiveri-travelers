@@ -111,23 +111,23 @@ const Navbar = () => {
 
         {/* Mobile Hamburger Menu */}
         <button
-          className="space-y-1 focus:outline-none lg:hidden"
+          className={`space-y-1 focus:outline-none lg:hidden px-4`}
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <motion.div
-            className="w-6 h-0.5 bg-black"
+            className={`w-6 h-0.5 bg-black ${scrollPosition > 10 ? "bg-black" : "bg-white"}`}
             animate={isExpanded ? "open" : "closed"}
             variants={topLineVariants}
             initial="closed"
           ></motion.div>
           <motion.div
-            className="w-6 h-0.5 bg-black"
+            className={`w-6 h-0.5 bg-black ${scrollPosition > 10 ? "bg-black" : "bg-white"}`}
             animate={isExpanded ? "open" : "closed"}
             variants={middleLineVariants}
             initial="closed"
           ></motion.div>
           <motion.div
-            className="w-6 h-0.5 bg-black"
+            className={`w-6 h-0.5 bg-black ${scrollPosition > 10 ? "bg-black" : "bg-white"}`}
             animate={isExpanded ? "open" : "closed"}
             variants={bottomLineVariants}
             initial="closed"
