@@ -2,7 +2,7 @@ const navItems = [
   { name: "Home", href: "/", subItems: [] },
   {
     name: "Explore",
-    href: "#",
+    href: "/explore",
     subItems: [
       { name: "Introduction", href: "#" },
       { name: "Government Institutions", href: "#" },
@@ -32,7 +32,7 @@ const navItems = [
   },
   {
     name: "Facilities",
-    href: "#",
+    href: "/facilities",
     subItems: [
       { name: "Food & Accomodation", href: "#" },
       { name: "Traveling", href: "#" },
@@ -50,7 +50,7 @@ const navItems = [
   },
   {
     name: "Occasions",
-    href: "#",
+    href: "/occasions",
     subItems: [
       { name: "New Year Celebration", href: "#" },
       { name: "Eid Cultural Festival", href: "#" },
@@ -62,7 +62,7 @@ const navItems = [
   },
   {
     name: "Things To Do",
-    href: "#",
+    href: "/things-to-do",
     subItems: [
       { name: "Canoe / Watersports", href: "#" },
       { name: "Dinner at Beach", href: "#" },

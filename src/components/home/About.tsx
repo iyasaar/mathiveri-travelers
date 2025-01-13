@@ -84,7 +84,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="bg-white py-16 px-8 lg:px-32 min-h-screen flex flex-col justify-center">
+    <section className="bg-white py-0 px-8 lg:px-32 min-h-[80vh] md:min-h-screen flex flex-col md:justify-center md:mb-0 mb-10">
       {/* Top Row - Text Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left - Heading */}

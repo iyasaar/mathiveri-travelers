@@ -31,10 +31,10 @@ const Introduction = () => {
     // Fade and Slide effect for the text
     const splitText = new SplitType(headingRef.current, { types: "chars" });
     gsap.from(splitText.chars, {
-      duration: 1,
+      duration: 0.5,
       x: -100,
       opacity: 0,
-      stagger: 0.1,
+      stagger: 0.05,
       ease: "power2.out",
       scrollTrigger: {
         trigger: headingRef.current,
@@ -54,14 +54,14 @@ const Introduction = () => {
       <div className="relative z-10 mb-8">
         <h1
           ref={headingRef}
-          className="text-[40px] md:text-[100px] font-extralight text-black"
+          className="text-[40px] md:text-[60px] font-extralight text-black font-serif italic text-center w-[80%] md:w-[70%] mx-auto"
         >
-          Welcome to Mathiveri Island
+          "A true paradise where nature and culture blend in perfect harmony"
         </h1>
       </div>
 
       {/* Parallax Image */}
-      <div className="relative w-full h-[30vh] overflow-hidden rounded-lg">
+      <div className="relative w-[80%] h-[50vh] overflow-hidden rounded-lg ">
         <div ref={imageRef} className="relative w-full h-full">
           <Image
             src="/introduction/01.jpg"

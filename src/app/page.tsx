@@ -17,6 +17,7 @@ import TourismRelated from "@/components/home/TourismRelated";
 import GovtInstitutions from "@/components/home/GovtInstitutions";
 import ThingsToDo from "@/components/home/ThingsToDo";
 import Historical from "@/components/home/Historical";
+import Map from "@/components/home/Map";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,13 +40,15 @@ const Home = () => {
         <Hero />
         <Introduction />
         <About />
-        <Facilities />
+        {/* <Facilities />
         <Information />
         <Tourism />
         <TourismRelated />
         <GovtInstitutions />
         <ThingsToDo />
-        <Historical />
+        <Historical /> */}
+        <Map />
+
       </div>
     </>
   );
