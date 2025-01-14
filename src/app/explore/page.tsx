@@ -3,6 +3,7 @@ import AboutSection2 from "@/components/home/About2";
 import GovtInstitutions from "@/components/home/GovtInstitutions";
 import Information from "@/components/home/Information";
 import Tourism from "@/components/home/Tourism";
+import TourismRelated from "@/components/home/TourismRelated";
 
 const explore = () => {
   return (
@@ -18,7 +19,7 @@ const explore = () => {
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-          <h1 className="text-white text-4xl font-bold font-serif tracking-wider">
+          <h1 className="text-white text-4xl font-bold font-serif tracking-wider text-center">
             EXPLORE MATHIVERI ISLANDS
           </h1>
         </div>
@@ -30,6 +31,7 @@ const explore = () => {
         <Information />
         <Tourism />
         <GovtInstitutions />
+        <TourismRelated />
       </div>
     </div>
   );

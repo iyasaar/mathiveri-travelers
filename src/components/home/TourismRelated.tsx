@@ -19,119 +19,57 @@ const TourismRelated = () => {
         onEnter: () => setIsVisible(true),
         onLeaveBack: () => setIsVisible(false), // Reset if scrolling back
       });
-
-      // Intro text animation
-      gsap.fromTo(
-        ".ethos-intro-text",
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", delay: 0.5 }
-      );
-
-      // Large image parallax effect
-      gsap.to(".ethos-large-image", {
-        y: -50,
-        scrollTrigger: {
-          trigger: ".ethos-large-image",
-          start: "top bottom",
-          scrub: true,
-        },
-      });
-
-      // Large image text animation
-      gsap.fromTo(
-        ".ethos-text",
-        { opacity: 0, x: 50 },
-        { opacity: 1, x: 0, duration: 1.5, ease: "power3.out", delay: 0.7 }
-      );
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="ethos" ref={sectionRef} className="relative bg-[#e0ebf3]/25 ">
-      {/* Background */}
-      <div className="absolute inset-0 bg-bluebg/0 z-0 will-change-transform"></div>
-
-      {/* main container */}
-      <div
-        className="relative z-10 mx-auto"
-        style={{ width: `calc(100% - 15.5vw)` }}
-      >
-        {/* Small Image and Title */}
-        <div className="flex">
-          {/* Small Image */}
-          <div className="md:w-[22.5vw] md:h-[16.493vw] max-w-96 overflow-hidden -mt-[5vw] z-[999]">
-            <img
-              src="/finolhu/01.jpg"
-              alt="Ethos Small"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-
-          {/* Title */}
-          <div className="text-4xl font-serif text-black ml-5 self-end mt-[1.6vw] will-change-transform">
-            <h2 className="flex overflow-hidden">
-              <AnimatePresence>
-                {isVisible && (
-                  <motion.div
-                    initial={{ opacity: 1 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+    <section
+      ref={sectionRef}
+      className="flex flex-col md:flex-row md:items-center md:justify-between mx-auto px-4 md:gap-10 min-h-[80vh] md:-mt-44 mt-52 max-w-screen-2xl md:px-16"
+    >
+      {/* Small Image */}
+      <div className="w-full md:w-1/2 rounded-lg overflow-hidden">
+        <img src="/finolhu/01.jpg" alt="Ethos Small" className="w-full" />
+      </div>
+      {/* Title and Description */}
+      <div className="w-full md:w-1/2 self-center mt-5 md:mt-0 md:ml-20">
+        <div className="">
+          <h2 className="flex overflow-hidden text-2xl md:text-4xl font-serif font-medium mb-8 mt-8 text-center md:text-left">
+            <AnimatePresence>
+              {isVisible && (
+                <motion.div
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <SplitText
+                    initial={{ y: "100%" }}
+                    animate="visible"
+                    variants={{
+                      visible: (i: any) => ({
+                        y: 0,
+                        transition: {
+                          delay: i * 0.2,
+                        },
+                      }),
+                    }}
                   >
-                    <SplitText
-                      initial={{ y: "100%" }}
-                      animate="visible"
-                      variants={{
-                        visible: (i: any) => ({
-                          y: 0,
-                          transition: {
-                            delay: i * 0.2,
-                          },
-                        }),
-                      }}
-                    >
-                      Mathiveri Finolhu
-                    </SplitText>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </h2>
-          </div>
+                    Mathiveri Finolhu
+                  </SplitText>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </h2>
         </div>
-
-        {/* Intro Text */}
-        <blockquote className="text-base md:text-lg text-gray-600 font-light ethos-intro-text max-w-[600px] mt-[3vw] overflow-hidden leading-8 will-change-transform ml-[0] md:ml-[calc(23.5vw)]">
+        <p className="w-full md:w-5/6 text-base md:text-lg text-gray-600 mb-8 leading-relaxed text-left md:text-left">
           Mathiveri Finolhu is a stunning sandbank in the Mathiveri Lagoon,
           easily accessible by walking or swimming from Mathiveri Island. This
           picturesque sandbank features a few scattered trees and is surrounded
           by pristine beaches, offering a serene escape with crystal-clear
           waters and breathtaking views of the tropical paradise.
-        </blockquote>
-
-        {/* Content Section */}
-        <div className="flex md:flex-row flex-col">
-          {/* Large Image */}
-          <div className="relative md:ml-[5vw] md:w-[56vw] md:h-[38vw] mt-6 md:top-[10vw]">
-            <img
-              src="/finolhu/02.webp"
-              alt="Ethos Large"
-              className="w-full h-auto object-cover shadow-md rounded-lg"
-            />
-          </div>
-
-          {/* Text beside Image */}
-          <div className="md:ml-[5vw] md:max-w-[500px] flex items-center mt-[10vw] pb-10 md:pb-0">
-            <p className="text-base md:text-lg text-gray-600 ethos-text leading-8 will-change-transform">
-              Mathiveri Island is surrounded by vibrant coral reefs and a
-              picturesque lagoon, teeming with marine life. The clear, shallow
-              waters make it an ideal spot for snorkeling, diving, and
-              watersports. Colorful fish, sea turtles, and diverse coral
-              formations offer an unforgettable underwater experience,
-              showcasing the Maldives' natural beauty.
-            </p>
-          </div>
-        </div>
+        </p>
       </div>
     </section>
   );

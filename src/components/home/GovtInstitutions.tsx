@@ -65,7 +65,7 @@ const GovtInstitutions = () => {
   return (
     <section
       ref={containerRef}
-      className="bg-white py-16 px-8 lg:px-32 mt-[10vw] min-h-screen"
+      className="bg-white py-16 px-8 lg:px-32 mt-[10vw] min-h-[95vh]"
     >
       <h2 className="text-2xl md:text-4xl font-serif font-medium  md:mb-8 md:mt-8 text-center md:text-left">
         Government Institutions

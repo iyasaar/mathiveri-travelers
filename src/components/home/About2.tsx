@@ -112,23 +112,11 @@ const AboutSection2 = () => {
       {/* Bottom Row - Images */}
       <div className="grid grid-cols-5 gap-8 mt-16 items-center">
         {/* Left - Smaller Grayscale Image */}
-        <div
-          ref={(el: any) => imageRefs.current.push(el)}
-          className="col-span-1 relative h-[200px] lg:h-[300px] overflow-hidden"
-        >
-          {/* <Image
-            src="/introduction/04.JPG"
-            alt="Stone Texture"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          /> */}
-        </div>
 
         {/* Right - Larger Color Image */}
         <div
           ref={(el: any) => imageRefs.current.push(el)}
-          className="col-span-4 relative h-[400px] lg:h-[600px] overflow-hidden"
+          className="col-span-5 relative h-[400px] lg:h-[600px] overflow-hidden"
         >
           <Image
             src="/introduction/03.jpg"
