@@ -1,7 +1,9 @@
 "use client";
 import AboutSection2 from "@/components/home/About2";
+import CuisineSection from "@/components/home/Cuisine";
 import GovtInstitutions from "@/components/home/GovtInstitutions";
 import Information from "@/components/home/Information";
+import Landmarks from "@/components/home/Landmarks";
 import Tourism from "@/components/home/Tourism";
 import TourismRelated from "@/components/home/TourismRelated";
 
@@ -26,12 +28,15 @@ const explore = () => {
       </div>
 
       {/* Main Content */}
-      <div className="py-12 px-6 md:px-12 lg:px-24 mx-auto">
+      <div className="py-12 mx-auto">
         <AboutSection2 />
         <Information />
         <Tourism />
         <GovtInstitutions />
         <TourismRelated />
+        <CuisineSection />
+        <Landmarks />
+
       </div>
     </div>
   );
