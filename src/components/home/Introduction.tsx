@@ -29,12 +29,12 @@ const Introduction = () => {
     });
 
     // Fade and Slide effect for the text
-    const splitText = new SplitType(headingRef.current, { types: "chars" });
-    gsap.from(splitText.chars, {
+    const splitText = new SplitType(headingRef.current, { types: "words" });
+    gsap.from(splitText.words, {
       duration: 0.5,
       x: -100,
       opacity: 0,
-      stagger: 0.05,
+      stagger: 0.1,
       ease: "power2.out",
       scrollTrigger: {
         trigger: headingRef.current,
