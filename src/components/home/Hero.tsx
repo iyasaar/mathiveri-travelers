@@ -61,10 +61,10 @@ const Hero = () => {
         <div className="relative z-10 grid grid-cols-1 gap-8 w-11/12 sm:w-2/3 md:mt-0 -mt-12">
           {[
             { title: "How to reach Mathiveri", href: "/reach-mathiveri" },
-            { title: "How to stay in Mathiveri", href: "/stay-mathiveri" },
+            { title: "How to stay in Mathiveri", href: "/services/stays" },
             {
               title: "Things to do in Mathiveri",
-              href: "/things-to-do-mathiveri",
+              href: "/things-to-do",
             },
           ].map((item, index) => (
             <Link key={index} href={item.href}>

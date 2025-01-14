@@ -16,7 +16,7 @@ export default function OccasionsPage() {
   return (
     <main className="w-full min-h-screen bg-gray-50">
       {/* HERO SECTION */}
-      <section className="relative h-[150px] md:h-[200px] w-full">
+      <section className="relative h-[150px] md:h-[230px] w-full">
         <Image
           src="/occasions/01.jpg"
           alt="Mathiveri Island Occasions Hero"

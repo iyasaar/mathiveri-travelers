@@ -8,7 +8,7 @@ const Provider = () => {
     <div className="min-h-screen">
       {/* Header Section */}
       <div
-        className="md:h-[200px] h-[150px] bg-cover bg-center relative"
+        className="md:h-[230px] h-[150px] bg-cover bg-center relative"
         style={{
           backgroundImage: `url('/bg2.jpg')`,
           backgroundRepeat: "no-repeat",

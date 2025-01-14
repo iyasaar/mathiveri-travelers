@@ -58,7 +58,7 @@ const ThingsToDoPage: React.FC = () => {
   return (
     <div className="bg-blue-50 min-h-screen pb-20">
       <div
-        className="md:h-[200px] h-[150px] bg-cover bg-center relative"
+        className="md:h-[230px] h-[150px] bg-cover bg-center relative"
         style={{
           backgroundImage: `url('/bg.jpg')`,
           backgroundRepeat: "repeat-x",
@@ -93,7 +93,7 @@ const ThingsToDoPage: React.FC = () => {
               />
             </div>
             <h2 className="text-2xl font-semibold mb-4">{item.title}</h2>
-            <p className="text-gray-700">{item.description}</p>
+            <p className="text-gray-700 text-base md:text-lg">{item.description}</p>
           </motion.div>
         ))}
       </div>
