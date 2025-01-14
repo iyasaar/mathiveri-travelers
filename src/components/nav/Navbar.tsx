@@ -50,8 +50,26 @@ const Navbar = () => {
         }`}
       >
         {/* Logo Section */}
-        <div className="flex items-center space-x-4 cursor-pointer" onClick={() => router.push("/")}>
+        <div
+          className="flex items-center space-x-4 cursor-pointer"
+          onClick={() => router.push("/")}
+        >
           <Image src="/logo.png" alt="Logo" width={60} height={60} />
+          {/* Language Dropdown */}
+          <select
+            className={`bg-transparent focus:outline-none ${scrollPosition > 10 ? "text-black" : "text-white"}`}
+            onChange={(e) => console.log(e.target.value)}
+          >
+            <option value="en" className="text-black">
+              English
+            </option>
+            <option value="zh" className="text-black">
+              Chinese
+            </option>
+            <option value="ru" className="text-black">
+              Russian
+            </option>
+          </select>
         </div>
 
         {/* Desktop Nav Items */}
