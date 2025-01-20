@@ -40,7 +40,7 @@ export const occasionsData = [
                     with stunning backdrops. Couples can enjoy personalized services, from 
                     photography to traditional Maldivian rituals, creating unforgettable memories 
                     for their special day.`,
-    image: "/occasions/weddings.jpg",
+    image: "/occasions/weddings/01.webp",
   },
   {
     id: "celebrations",
@@ -48,6 +48,6 @@ export const occasionsData = [
     description: `Mathiveri is an ideal destination for celebrations like birthdays, anniversaries, 
                     and family gatherings. Enjoy private beach dinners, custom events, and lively 
                     activities, all set against the stunning backdrop of the Maldives.`,
-    image: "/occasions/celebrations.jpg",
+    image: "/occasions/celebrations/01.jpg",
   },
 ];

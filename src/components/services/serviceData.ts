@@ -8,7 +8,7 @@ export const serviceData = [
     {
       id: 6,
       title: "Diving",
-      image: "/services/diving/01.jpg",
+      image: "/facilities/Water-Sports-&-Dive-Centers/01.jpeg",
       slug: "diving",
     },
     {
@@ -26,19 +26,19 @@ export const serviceData = [
     {
       id: 11,
       title: "Hair Dressing & Makeup",
-      image: "/services/Hair Dressing & Makeup/01.jpg",
+      image: "/services/Hair Dressing & Makeup/01.webp",
       slug: "hair-dressing-makeup",
     },
     {
       id: 8,
       title: "Laundry Service",
-      image: "/services/laundry service/01.jpg",
+      image: "/services/laundry/01.webp",
       slug: "laundry-service",
     },
     {
       id: 9,
       title: "Photo & Video Shooting",
-      image: "/services/Photo & Video Shooting/01.jpg",
+      image: "/services/photo/01.jpg",
       slug: "photo-video-shooting",
     },
     {
@@ -50,13 +50,13 @@ export const serviceData = [
     {
       id: 10,
       title: "Traditional Herbal & Spa Treatments",
-      image: "/services/Traditional Herbal & spa treatments/01.jpg",
+      image: "/services/spa/01.jpg",
       slug: "traditional-herbal-spa-treatments",
     },
     {
       id: 5,
       title: "Water Sports",
-      image: "/services/water sports/01.jpg",
+      image: "/facilities/Water-Sports-&-Dive-Centers/02.jpg",
       slug: "water-sports",
     },
   ];
