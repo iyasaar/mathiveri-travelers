@@ -8,16 +8,16 @@ const Provider = () => {
     <div className="min-h-screen">
       {/* Header Section */}
       <div
-        className="md:h-[230px] h-[150px] bg-cover bg-center relative"
+        className="md:h-[230px] h-[230px] bg-cover bg-center relative"
         style={{
           backgroundImage: `url('/bg2.jpg')`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-4xl font-bold font-serif tracking-wider">
+          <h1 className="text-white text-4xl font-bold font-serif tracking-wide md:mt-0 mt-8">
             Service Providers
           </h1>
         </div>

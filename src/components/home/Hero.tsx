@@ -57,10 +57,10 @@ const Hero = () => {
       </div>
 
       {/* Text Section */}
-      <div className="flex md:flex-row flex-col-reverse  w-full justify-center items-center md:gap-0 gap-36 h-full pl-4 sm:pl-8 md:pl-12">
+      <div className="flex md:flex-row flex-col-reverse  w-full justify-center items-center md:gap-0 gap-36 h-full pl-0 sm:pl-8 md:pl-12">
         <div className="relative z-10 grid grid-cols-1 gap-8 w-11/12 sm:w-2/3 md:mt-0 -mt-12">
           {[
-            { title: "How to reach Mathiveri", href: "/reach-mathiveri" },
+            { title: "How to reach Mathiveri", href: "/facilities" },
             { title: "How to stay in Mathiveri", href: "/services/stays" },
             {
               title: "Things to do in Mathiveri",

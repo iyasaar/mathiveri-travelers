@@ -16,7 +16,7 @@ export default function OccasionsPage() {
   return (
     <main className="w-full min-h-screen bg-gray-50">
       {/* HERO SECTION */}
-      <section className="relative h-[150px] md:h-[230px] w-full">
+      <section className="relative h-[230px] md:h-[230px] w-full">
         <Image
           src="/occasions/01.jpg"
           alt="Mathiveri Island Occasions Hero"
@@ -25,7 +25,7 @@ export default function OccasionsPage() {
           priority
           className="opacity-80"
         />
-        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center md:pt-0 pt-8">
           <h1 className="text-white text-center text-3xl md:text-5xl font-bold uppercase font-serif tracking-wide">
             Celebrate in Mathiveri
           </h1>

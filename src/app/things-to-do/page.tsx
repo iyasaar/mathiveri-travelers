@@ -58,15 +58,15 @@ const ThingsToDoPage: React.FC = () => {
   return (
     <div className="bg-blue-50 min-h-screen pb-20">
       <div
-        className="md:h-[230px] h-[150px] bg-cover bg-center relative"
+        className="md:h-[230px] h-[230px] bg-cover bg-center relative"
         style={{
           backgroundImage: `url('/bg.jpg')`,
           backgroundRepeat: "repeat-x",
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center md:pt-0 pt-8">
           <h1 className="text-white text-4xl font-bold font-serif tracking-wider text-center">
             THINGS TO DO
           </h1>

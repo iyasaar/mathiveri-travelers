@@ -54,7 +54,7 @@ const Navbar = () => {
       >
         {/* Logo Section */}
         <div
-          className="flex items-center space-x-4 cursor-pointer"
+          className={`flex items-center space-x-4 cursor-pointer`}
           onClick={() => router.push("/")}
         >
           {/* <Image src="/logo.png" alt="Logo" width={60} height={60} /> */}
@@ -107,7 +107,7 @@ const Navbar = () => {
         <div></div>
         {/* Mobile Hamburger Menu */}
         <button
-          className="space-y-1 focus:outline-none lg:hidden px-4"
+          className="space-y-1 focus:outline-none lg:hidden"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <motion.div
@@ -138,7 +138,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isExpanded && (
           <motion.div
-            className="fixed inset-0 bg-white z-40 flex flex-col lg:hidden mt-11 overflow-y-auto"
+            className={`fixed inset-0 bg-white z-40 flex flex-col lg:hidden md:mt-11 overflow-y-auto transition-all ${scrollPosition > 10 ? "mt-14 " : "z-50"}`}
             initial="closed"
             animate="open"
             exit="closed"
