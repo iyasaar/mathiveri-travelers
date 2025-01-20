@@ -71,7 +71,7 @@ const Navbar = () => {
             className={`bg-transparent focus:outline-none ${
               scrollPosition > 10 ? "text-black" : "text-white"
             }`}
-            onChange={(e) => console.log(e.target.value)}
+            onChange={(e) => e.preventDefault()}
           >
             <option value="en" className="text-black">
               English
