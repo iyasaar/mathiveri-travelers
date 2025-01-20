@@ -108,8 +108,8 @@ export default function Landmarks() {
             </div>
           </div>
 
-          <div className=" px-4 md:px-8 lg:px-16">
-            <div className="max-w-screen-md mx-auto text-gray-800">
+          <div className=" px-0 md:px-8 lg:px-16">
+            <div className="max-w-screen-lg mx-auto text-gray-800">
               <div className="relative w-full h-80">
                 <Image
                   src="/landmarks/welcome/01.JPG"
@@ -133,7 +133,7 @@ export default function Landmarks() {
       >
         <div className="max-w-6xl mx-auto md:space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="order-2 lg:order-1 self-center">
+            <div className="order-1 lg:order-1 self-center">
               <h2 className="text-3xl md:text-4xl font-serif leading-tight">
                 Shark Point
               </h2>

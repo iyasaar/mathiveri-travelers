@@ -50,7 +50,7 @@ export const serviceData = [
     {
       id: 10,
       title: "Traditional Herbal & Spa Treatments",
-      image: "/services/Traditional Herbal & spa treatments_/01.jpg",
+      image: "/services/Traditional Herbal & spa treatments/01.jpg",
       slug: "traditional-herbal-spa-treatments",
     },
     {

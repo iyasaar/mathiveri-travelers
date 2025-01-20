@@ -158,8 +158,8 @@ export const providersData = [
   {
     id: "15",
     title: "Kamana Spa",
-    slug: "hair-dressing-makeup",
-    slugTitle: "Hair Dressing & Makeup",
+    slug: "traditional-herbal-spa-treatments",
+    slugTitle: "Traditional Herbal & Spa Treatments",
     description: "",
     image: "",
     phone: "",

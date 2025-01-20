@@ -47,7 +47,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0" ref={imageRef}>
         <Image
-          src="/introduction/02.jpg"
+          src="/introduction/05.jpeg"
           alt="Mathiveri Islands"
           layout="fill"
           objectFit="cover"
@@ -70,9 +70,9 @@ const Hero = () => {
             <Link key={index} href={item.href}>
               <div
                 ref={(el: any) => (cardsRef.current[index] = el)}
-                className="bg-white bg-opacity-20 backdrop-blur-lg border border-white border-opacity-30 rounded-lg p-6 shadow-lg text-center transition-transform transform hover:scale-105 hover:bg-opacity-30"
+                className="bg-white bg-opacity-60 backdrop-blur-lg border border-white border-opacity-30 rounded-lg p-6 shadow-lg text-center transition-transform transform hover:scale-105 hover:bg-opacity-30"
               >
-                <h2 className="text-2xl font-medium text-gray-300">
+                <h2 className="text-2xl font-medium text-gray-700">
                   {item.title}
                 </h2>
               </div>
@@ -85,7 +85,7 @@ const Hero = () => {
             className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-wide"
             ref={textRef}
           >
-            <span className={cedar.className}>Mathiveri Islands</span>
+            {/* <span className={cedar.className}>Mathiveri Islands</span> */}
           </h1>
         </div>
       </div>

@@ -60,7 +60,7 @@ const Information = () => {
       <div className="max-w-7xl mx-auto">
         {/* Intro Text */}
         <div className="mb-12 intro-text">
-          <h2 className="text-base md:text-lg lg:text-xl font-serif font-light text-black leading-relaxed">
+          <h2 className="text-base md:text-lg lg:text-xl font-medium text-gray-700 leading-relaxed">
             Mathiveri Island is Located in the Western Part of Ari Atoll, at
             4.191833 degrees north and 72.746139 degrees east, and belongs to
             North Ari Atoll. The code assigned to this island is U5. Mathiveri
