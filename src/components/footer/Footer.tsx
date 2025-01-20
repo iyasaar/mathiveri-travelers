@@ -1,4 +1,7 @@
+import { Cedarville_Cursive } from "next/font/google";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+
+const cedar = Cedarville_Cursive({ subsets: ["latin"], weight: "400" });
 
 const Footer = () => {
   return (
@@ -6,11 +9,14 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Logo Section */}
         <div className="flex flex-col items-center md:items-start">
-          <img
+          {/* <img
             src="/logo.png"
             alt="Logo"
             className="w-48 md:w-56 h-auto mb-4"
-          />
+          /> */}
+          <span className={`${cedar.className} text-2xl md:text-3xl`}>
+            Mathiveri Maldives
+          </span>
           <p className="text-center md:max-w-[60%] md:text-left text-sm md:text-base text-gray-600">
             Mathiveri Island - Discover the beauty and serenity of a tropical
             paradise.
@@ -76,7 +82,7 @@ const Footer = () => {
 
       {/* Bottom Text */}
       <div className="mt-12 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Mathiveri Island. All Rights Reserved.
+        © {new Date().getFullYear()} Mathiveri Maldives. All Rights Reserved.
       </div>
     </footer>
   );

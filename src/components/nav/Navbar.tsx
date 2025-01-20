@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import navItems from "./NavItems";
+import { Cedarville_Cursive } from "next/font/google";
+
+const cedar = Cedarville_Cursive({ subsets: ["latin"], weight: "400" });
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -54,10 +57,20 @@ const Navbar = () => {
           className="flex items-center space-x-4 cursor-pointer"
           onClick={() => router.push("/")}
         >
-          <Image src="/logo.png" alt="Logo" width={60} height={60} />
+          {/* <Image src="/logo.png" alt="Logo" width={60} height={60} /> */}
+          <span
+            className={`${cedar.className} ${
+              scrollPosition > 10 ? "text-black" : "text-white"
+            }`}
+          >
+            Mathiveri
+            <br /> Maldives
+          </span>
           {/* Language Dropdown */}
           <select
-            className={`bg-transparent focus:outline-none ${scrollPosition > 10 ? "text-black" : "text-white"}`}
+            className={`bg-transparent focus:outline-none ${
+              scrollPosition > 10 ? "text-black" : "text-white"
+            }`}
             onChange={(e) => console.log(e.target.value)}
           >
             <option value="en" className="text-black">
