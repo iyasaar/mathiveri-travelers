@@ -39,7 +39,7 @@ export const data = [
     title: "Excursion Trips and Boat Hiring",
     description:
       "Mathiveri offers exciting excursion trips, including manta ray/turtle/whale shark safari, sandbank trips, island hopping, island sunset cruises, and fishing tours. Boat hire services are available, allowing visitors to explore nearby sandbanks, reefs, and experience the Maldives' natural beauty.",
-    image: "/facilities/Exursion-Trips/01.jpg",
+    image: "/excursion/Conquerors Excursions/03.PNG",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const data = [
     title: "Spa and Salon Treatments",
     description:
       "Mathiveri offers hairdressing services, makeup and traditional Maldivian spa treatments, including relaxing massages and natural therapies. Experience rejuvenating wellness with locally inspired treatments.",
-    image: "/facilities/Hair-Dressing-&-Spa-Treatments/01.jpg",
+    image: "/facilities/Hair-Dressing-&-Spa-Treatments/02.jpg",
   },
   {
     id: 9,
@@ -67,7 +67,7 @@ export const data = [
     title: "Photo and Video Shoots",
     description:
       "Mathiveri offers professional photo and video shooting services, capturing the island's natural beauty and special moments. Skilled photographers and videographers provide personalized sessions for unforgettable memories against stunning beach and lagoon backdrops.",
-    image: "/facilities/Photography/01.jpg",
+    image: "/facilities/Photography/02.webp",
   },
   {
     id: 11,
